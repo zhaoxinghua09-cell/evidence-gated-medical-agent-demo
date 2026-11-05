@@ -2,7 +2,7 @@
   "schema": "r9-reference-package-manifest/v1",
   "package": "Evidence-gated lifecycle demo for a hospital-deployed medical AI agent",
   "version": "v0.1",
-  "generated_at_utc": "2026-11-05T09:38:13Z",
+  "generated_at_utc": "2026-11-05T10:20:21Z",
   "author": {
     "name": "Xinghua Zhao",
     "role": "independent expert",
@@ -50,18 +50,18 @@
     },
     {
       "path": "llms.txt",
-      "bytes": 1881,
-      "sha256": "b4359009bc99dee0e50302516490e0f0f6e5e9a99825df0ad193b34126e9a7ca"
+      "bytes": 2059,
+      "sha256": "9d322441a8d5b26286b9a56e188e8d5811b779072458c028cf5c3ee48673a992"
     },
     {
       "path": "README.md",
-      "bytes": 3885,
-      "sha256": "2809d4aba2d8443cce5c39ef2d2a81770fa3925919afff3a9fe73272e964a045"
+      "bytes": 4264,
+      "sha256": "d02e166e57272b72852873fb895342fb9c3359c8411c8743890b3cf8b5e3708b"
     },
     {
       "path": "VERIFICATION.md",
-      "bytes": 2152,
-      "sha256": "3dc7da79b150a97938ce511d97baeef144a924baf4f8d85b8f7f48fd45705188"
+      "bytes": 2571,
+      "sha256": "e62d399508aec2e267d5293e7aa51fd27843837443a041407f77d924108904f5"
     }
   ]
 }
