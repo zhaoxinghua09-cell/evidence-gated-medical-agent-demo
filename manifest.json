@@ -1,0 +1,67 @@
+{
+  "schema": "r9-reference-package-manifest/v1",
+  "package": "Evidence-gated lifecycle demo for a hospital-deployed medical AI agent",
+  "version": "v0.1",
+  "generated_at_utc": "2026-11-05T09:38:13Z",
+  "author": {
+    "name": "Xinghua Zhao",
+    "role": "independent expert",
+    "orcid": "0009-0001-0512-1237",
+    "contact": "zhaoxinghua06@126.com"
+  },
+  "license": {
+    "code": "Apache-2.0",
+    "full_text": "LICENSE",
+    "note": "No theoretical corpus is contained in or licensed by this repository; no statement is made about the licence status of external work."
+  },
+  "anchors": {
+    "internal": "Authorship and ORCID inside the files; package name and version in ATTESTATION.md section 2.",
+    "external": "Public GitHub commit history of the repository hosting this package; each file's commit SHA is recorded in the publication receipt.",
+    "self_exclusion": "manifest.json is excluded from its own hash list; see ATTESTATION.md section 3."
+  },
+  "boundary": [
+    "Fictional scenario, no real patient data.",
+    "Not a medical device, not SaMD, not clinical advice.",
+    "Not a conformity assessment, certification, endorsement, or evidence of production readiness.",
+    "No novelty claim for any individual mechanism; no regulatory alignment claim."
+  ],
+  "verification": "See VERIFICATION.md for the one-command run and the one-line integrity check.",
+  "file_count": 7,
+  "files": [
+    {
+      "path": "ATTESTATION.md",
+      "bytes": 3556,
+      "sha256": "0ae4c0c0b8fd6afe6ea547b151aba8f37032a3d5af2f0989d8c73889e67305c9"
+    },
+    {
+      "path": "failure_rules.json",
+      "bytes": 1282,
+      "sha256": "43f0b164c571147ec77ba49e1094e449850b38595bc00bbeac1baadf2f28b1d9"
+    },
+    {
+      "path": "lgd_medai_demo.py",
+      "bytes": 11964,
+      "sha256": "c98149231c121c040b98f268a8ba60ee7731cacbecfcff3bba176bb9be723443"
+    },
+    {
+      "path": "LICENSE",
+      "bytes": 11356,
+      "sha256": "31d805cc507abd0f22819fc7ba1b941d8b44f2980e4a98878daa527722bedd9d"
+    },
+    {
+      "path": "llms.txt",
+      "bytes": 1881,
+      "sha256": "b4359009bc99dee0e50302516490e0f0f6e5e9a99825df0ad193b34126e9a7ca"
+    },
+    {
+      "path": "README.md",
+      "bytes": 3885,
+      "sha256": "2809d4aba2d8443cce5c39ef2d2a81770fa3925919afff3a9fe73272e964a045"
+    },
+    {
+      "path": "VERIFICATION.md",
+      "bytes": 2152,
+      "sha256": "3dc7da79b150a97938ce511d97baeef144a924baf4f8d85b8f7f48fd45705188"
+    }
+  ]
+}
