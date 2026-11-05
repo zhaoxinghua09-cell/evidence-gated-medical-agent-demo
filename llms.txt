@@ -6,16 +6,19 @@
 
 ## Purpose
 
-A dependency-free, single-file Python demo of a runtime evidence gate for a
-fictional hospital-deployed medical AI agent. It illustrates: registry state,
+A dependency-free Python demo (one script plus one required JSON failure-rule
+catalog, standard library only) of a runtime evidence gate for a fictional
+hospital-deployed medical AI agent. It illustrates: registry state,
 "evidence absent" vs "evidence found wrong", change-triggered re-evaluation,
 population-drift silent failure, pause / rollback / re-verify / resume, and a
 deterministic JSON audit receipt with a chain digest.
 
 ## Run
 
-    python lgd_medai_demo.py          # Python 3.10+, standard library only
+    python lgd_medai_demo.py          # from repo root, Python 3.10+, stdlib only
 
+Requires failure_rules.json beside the script; copying only the .py file
+exits 1 with FileNotFoundError.
 Expected: exit 0, final_state = RESUMED, log receipts DENIED / PAUSE /
 ROLLBACK / RESUMED. See VERIFICATION.md for the full acceptance contract.
 
