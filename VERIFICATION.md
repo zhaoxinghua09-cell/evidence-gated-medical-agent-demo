@@ -12,6 +12,8 @@ python lgd_medai_demo.py
 ```
 
 Requirements: Python 3.10 or newer, standard library only. No install step.
+The run needs **both** `lgd_medai_demo.py` and `failure_rules.json` in the same
+directory. Downloading or cloning the whole repository satisfies this.
 
 ## Acceptance contract
 
@@ -20,8 +22,13 @@ Requirements: Python 3.10 or newer, standard library only. No install step.
 | 1 | Exit code `0` | `README.md` → Quickstart |
 | 2 | `final_state = RESUMED` | `README.md` → Quickstart |
 | 3 | Log contains `DENIED`, `PAUSE`, `ROLLBACK`, `RESUMED` | `README.md` → Quickstart |
-| 4 | Code behaviour matches the four acts described in `README.md` | Read `lgd_medai_demo.py` (single file) |
+| 4 | Code behaviour matches the four acts described in `README.md` | Read `lgd_medai_demo.py` and `failure_rules.json` |
 | 5 | Every file's SHA-256 matches `manifest.json` | Machine-readable integrity check |
+
+Known failure mode: running `lgd_medai_demo.py` alone, without
+`failure_rules.json` alongside it, exits `1` with `FileNotFoundError` at
+`load_rules()`. This is expected; it is why the whole repository is the unit
+of reproduction, not the `.py` file alone.
 
 An optional integrity check, from the repository root:
 
