@@ -1,9 +1,10 @@
 # Evidence-gated lifecycle demo for a hospital-deployed medical AI agent
 
-A single-file, dependency-free reference demo of a **runtime gate**: at the
-moment an agent acts, the gate decides whether *this* registered agent
-instance, on *this* model version, may produce a finding — and re-decides when
-the model, its evidence base, or the operating population changes.
+A dependency-free reference demo of a **runtime gate**: at the moment an agent
+acts, the gate decides whether *this* registered agent instance, on *this*
+model version, may produce a finding — and re-decides when the model, its
+evidence base, or the operating population changes. It consists of one Python
+script and one JSON failure-rule catalog, using the standard library only.
 
 This package exists to make a standardization use case concrete and
 independently reproducible. It is **not** a product, a clinical validation, a
@@ -11,12 +12,18 @@ conformity assessment, or a claim of operational deployment.
 
 ## Quickstart
 
+Run from the repository root, with `failure_rules.json` beside the script:
+
 ```bash
 python lgd_medai_demo.py        # Python 3.10+, standard library only
 ```
 
 Expected result: exit code `0`, `final_state = RESUMED`, and a lifecycle log
 containing `DENIED`, `PAUSE`, `ROLLBACK` and `RESUMED` receipts.
+
+Copying only `lgd_medai_demo.py` without `failure_rules.json` raises
+`FileNotFoundError` at startup — the rule catalog is a required input, not an
+optional extra. Download or clone the whole repository.
 
 ## What it models
 
@@ -35,8 +42,8 @@ digest so any third party can reproduce the run.
 
 | File | Role |
 |---|---|
-| `lgd_medai_demo.py` | State machine, gate, monitoring and change gate (single file, no dependencies) |
-| `failure_rules.json` | Three example mappings from silent-failure signals to gate actions |
+| `lgd_medai_demo.py` | State machine, gate, monitoring and change gate (standard library only) |
+| `failure_rules.json` | Required input: three example mappings from silent-failure signals to gate actions |
 | `VERIFICATION.md` | How to verify this package independently |
 | `ATTESTATION.md` | Authorship, licence boundaries, timestamps and integrity anchors |
 | `manifest.json` | Machine-readable SHA-256 inventory of every file in this package |
