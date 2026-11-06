@@ -1,0 +1,11 @@
+# Evidence-gated medical AI demo: byte-deterministic cross-platform (archive SS32).
+#
+# Root cause of the Windows content-hash mismatch (see uibc-core#177 class of
+# bug): every tracked file stored an LF blob but was checked out as CRLF on
+# Windows (autocrlf), so the recorded SHA-256 (computed over LF bytes) did not
+# match the CRLF working-tree bytes. The same package therefore verified
+# differently per platform.
+#
+# Fix: force LF on BOTH store and checkout for every text file, so the bytes
+# always equal the manifest's recorded SHA-256 regardless of platform.
+* text eol=lf
