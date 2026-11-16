@@ -15,6 +15,8 @@ conformity assessment, or a claim of operational deployment.
 Run from the repository root, with `failure_rules.json` beside the script:
 
 ```bash
+git clone https://github.com/zhaoxinghua09-cell/evidence-gated-medical-agent-demo.git
+cd evidence-gated-medical-agent-demo
 python lgd_medai_demo.py        # Python 3.10+, standard library only
 ```
 
