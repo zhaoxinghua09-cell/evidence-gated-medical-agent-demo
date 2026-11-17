@@ -37,7 +37,7 @@ def now() -> str:
 
 
 def sha(s: str) -> str:
-    return hashlib.sha256(s.encode("utf-8")).hexdigest()[:16]
+    return hashlib.sha256(s.encode("utf-8")).hexdigest()
 
 
 class Evidence:
